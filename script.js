@@ -40,3 +40,35 @@ function removeActiveClasses() {
     panel.classList.remove("active");
   });
 }
+
+// mobibe menu
+const hamburger = document.querySelector(".hamburger");
+
+const offScreenMenu = document.querySelector(".navbar");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  offScreenMenu.classList.toggle("active");
+});
+
+// changing dark mode to light mode
+
+const modeIndicators = document.querySelectorAll(".mode-indicator");
+
+// Change css when any button is clicked
+const body = document.querySelector("body");
+const header = document.querySelector("header");
+const footer = document.querySelector("footer");
+
+modeIndicators.forEach((modeIndicator) => {
+  modeIndicator.addEventListener("click", function () {
+    body.classList.toggle("change-mode");
+    header.classList.toggle("change-mode");
+    footer.classList.toggle("change-mode");
+    offScreenMenu.classList.toggle("change-mode");
+
+    // Use ternary operator to switch button text
+    modeIndicator.textContent =
+      modeIndicator.textContent === "Light Mode" ? "Dark Mode" : "Light Mode";
+  });
+});

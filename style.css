@@ -22,6 +22,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 /* Global */
 p {
   font-size: 1rem;
@@ -37,10 +38,7 @@ li {
 h1 .name {
   color: var(--tertiary-color);
 }
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
+header {
   background-color: var(--primary-color);
   width: 100%;
   padding: 20px 20px;
@@ -51,24 +49,34 @@ h1 .name {
   -moz-box-shadow: 10px 10px 55px -30px rgba(255, 255, 255, 1);
   box-shadow: 10px 10px 55px -30px rgba(255, 255, 255, 1);
 }
+.mode-indicator {
+  justify-self: fle;
+}
 .logo {
   font-size: 1.3rem;
   font-weight: 900;
   align-items: center;
 }
-.navbar a {
-  color: var(--secondary-color);
+/* HAMBURGER LOGO */
+.hamburger {
+  display: hidden;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul li a {
+  display: block;
+  color: var(--tertiary-color);
   font-size: 0.9rem;
-  margin-right: 15px;
+  margin: 10px 25px;
   font-weight: 700;
   position: relative;
-  display: none;
 }
-.navbar a::after {
+.navbar ul li a::after {
   content: "";
   position: absolute;
   width: 100%;
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
   height: 3px;
   border-radius: 5px;
   left: 0;
@@ -79,49 +87,48 @@ h1 .name {
 .navbar a:hover::after {
   transform: scaleX(1);
 }
-.nav-link.home {
-  color: var(--tertiary-color);
+
+/* mode indicator btn */
+.mode-indicator {
+  height: 50px;
+  border-color: transparent;
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  width: fit-content;
+  padding: 15px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 25px;
 }
 
-/* mobile menu */
-.mobile-menu-icon {
-  display: block;
+/* dark - light mode */
+/* changes bg and color when button is clicked */
+.change-mode {
+  background-color: var(--secondary-color);
+  color: #000000;
 }
-.mobile-menu-icon button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+
+header.change-mode {
+  -webkit-box-shadow: 10px 10px 55px -30px #000000;
+  -moz-box-shadow: 10px 10px 55px -30px #3a3939;
+  box-shadow: 10px 10px 55px -30px #3a3939;
 }
-.icon-menu {
-  height: 1.5em;
+footer.change-mode {
+  -webkit-box-shadow: -1px -20px 20px -30px #000000;
+  -moz-box-shadow: -1px -20px 20px -30px #3a3939;
+  box-shadow: -1px -20px 20px -30px #3a3939;
+  z-index: 100;
 }
-.mobile-menu {
-  display: none;
-}
-.mobile-menu a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  color: var(--secondary-color);
-}
-.mobile-menu-icon .nav-link {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-.open-menu {
-  display: block;
+.navbar.change-mode {
+  color: var(--primary-color);
+  background: var(--secondary-color);
 }
 
 /* sections */
 .section {
   margin: 0;
   padding: 0 5%;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 /* section 1 */
@@ -181,7 +188,7 @@ h1 .name {
 /* about */
 h2.subtitle {
   width: 100%;
-  padding: 3% 0;
+  padding: 2% 0;
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
@@ -220,7 +227,8 @@ h2.subtitle {
   z-index: -1;
 }
 .about-image img {
-  max-width: 100%;
+  min-width: 100px;
+  max-width: 150px;
   z-index: 1;
   border-radius: 50%;
   display: block;
@@ -279,7 +287,7 @@ h2.subtitle {
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
-  height: 80vh;
+  height: 75vh;
   border-radius: 20px;
   cursor: pointer;
   flex: 0.5;
@@ -292,7 +300,7 @@ h2.subtitle {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
 }
 .panel h3 {
   font-weight: 700;
@@ -345,7 +353,7 @@ h2.subtitle {
 }
 
 .active-fade-in {
-  transition: opacity 3s ease;
+  transition: opacity 0.3s ease;
   opacity: 1;
 }
 
@@ -353,17 +361,22 @@ h2.subtitle {
 footer {
   background-color: var(--primary-color);
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px 0;
   -webkit-box-shadow: -1px -20px 20px -30px rgba(255, 255, 255, 1);
   -moz-box-shadow: -1px -20px 20px -30px rgba(255, 255, 255, 1);
   box-shadow: -1px -20px 20px -30px rgba(255, 255, 255, 1);
   z-index: 100;
 }
+
 footer div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer div a {
-  padding-right: 10px;
+footer div .social-link {
+  cursor: pointer;
+  margin-right: 15px;
 }

@@ -20,38 +20,28 @@
 
     <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
-  <body>
+  <body >
     <!-- nav bar -->
 
     <header class="header">
       <h2 class="logo">Thainá Oliveira</h2>
-      <nav class="navbar">
-        <a href="#home" class="nav-link home">Home</a>
-        <a href="#about" class="nav-link">Sobre Mim</a>
-        <a href="#skills" class="nav-link">Hobbies</a>
-        <a href="./index.html#contact" class="nav-link contact-us">Contato</a>
 
-        <div class="mobile-menu-icon">
-          <button onclick="menuShow()">
-            <svg xmlns="http://www.w3.org/2000/svg"
-            class="icon-menu"
-            width="24"
-            height="24"
-           style="fill: #faf9f6">
-           <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
-          </svg>
-            
-          </button>
-        </div>
-      </nav>
-
-      <div class="mobile-menu">
-        <a href="#home" class="nav-link home">Home</a>
-        <a href="#about" class="nav-link">Sobre Mim</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projetos" class="nav-link">Projetos</a>
-        <a href="./index.html#contact" class="nav-link contact-us">Contato</a>
+      <button class="mode-indicator deactive" type="button">Light Mode</button>
+   
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+      
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home" class="nav-link home">Home</a></li>
+          <li> <a href="#about" class="nav-link">Sobre Mim</a></li>
+          <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+          <li><button class="mode-indicator" type="button">Light Mode</button></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section class="container section" id="home">
@@ -97,7 +87,7 @@
         </div>
       </section>
   
-      <section class="section seaction--2 fade-in">
+      <section id="hobbies" class="section seaction--2 fade-in">
         <h2 class="subtitle">Hobbies</h2>
         <div class="container-img">
           <div
@@ -156,14 +146,14 @@
     
     <footer>
       <div>
-        <a href="https://www.linkedin.com/in/thaina-oliveira-goncalves/" class="social-link">
-          <!-- <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Freepik - Flaticon</a> -->
-          <img src="" alt="linkedin logo" class="social-img social"/>
+        <a class="social-link" href="https://www.linkedin.com/in/thaina-oliveira-goncalves/">
+          <svg class="social-img social" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#e53939"><circle cx="4.983" cy="5.009" r="2.188"></circle><path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path></svg>
         </a>
-       <a href="https://github.com/Thaina-Oliveira" class="social-link">
-         <!-- <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Laisa Islam Ani - Flaticon</a> -->
-          <img src="" alt="Github logo" class="social-img social"/>
+        <a class="social-link" href="https://github.com/Thaina-Oliveira">
+          <svg class="social-img social" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #e53939">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
         </a>
+       
       </div>
     </footer>
     <script src="script.js"></script>
